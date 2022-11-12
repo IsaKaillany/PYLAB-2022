@@ -6,7 +6,9 @@ from django.conf.urls.static import static
 #função path gerencia roteamentos dentro da aplicação
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', include('empresa.urls'))
+    path('home/', include('empresa.urls')),
+    path('vagas/', include('vagas.urls'))
 ]
+    
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
